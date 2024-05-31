@@ -17,8 +17,10 @@ list_of_files = [
     "src/utils/utils.py",
     "src/logger/__init__.py",
     "src/logger/logging.py",
+    "src/exception/exception.py",
+    "src/exception/__init__.py",
     "tests/unit/__init__.py",
-    "tests/integration.__init__.py",
+    "tests/integration/__init__.py",
     "init_setup.sh",
     "requirements.txt",
     "requirements_dev.txt",
@@ -38,4 +40,4 @@ for filepath in list_of_files:
     
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath)==0):
         with open(filepath, 'w') as f:
-            pass
+            pass 
