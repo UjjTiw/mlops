@@ -24,7 +24,8 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Data Ingestion started")
         try:
-            data=pd.read_csv("https://raw.githubusercontent.com/UjjTiw/mlops/main/experiment/playground-series-s3e8/train.csv")
+            # data=pd.read_csv("https://raw.githubusercontent.com/UjjTiw/mlops/main/experiment/playground-series-s3e8/train.csv")
+            data = pd.read_csv("/Users/ujjwaltiwari/Desktop/projects/mlops/experiment/playground-series-s3e8/train.csv")
             logging.info("Reading the dataframe")
 
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
@@ -39,7 +40,7 @@ class DataIngestion:
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
             test_data.to_csv(self.ingestion_config.test_data_path,index=False)
             
-            logging.info("Data Ingestion Completed")
+            logging.info("Data Ingestion Completed") 
             
             return (
                  
@@ -51,5 +52,9 @@ class DataIngestion:
 
 
         except Exception as e:
-            logging.info()
+            logging.info("Error")
             raise customexception(e,sys)
+
+if __name__=="__main__":
+    obj = DataIngestion()
+    obj.initiate_data_ingestion()
