@@ -10,13 +10,11 @@ from pathlib import Path
 from src.utils.utils import save_object,evaluate_model
 
 from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
-from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
 
 
 @dataclass 
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join('artifacts/model','model.pkl')
+    trained_model_file_path = os.path.join('artifacts','model.pkl')
     
     
 class ModelTrainer:
@@ -37,9 +35,7 @@ class ModelTrainer:
             'LinearRegression':LinearRegression(),
             'Lasso':Lasso(),
             'Ridge':Ridge(),
-            'Elasticnet':ElasticNet(),
-            'RandomForest': RandomForestRegressor(),
-            'XGB': XGBRegressor()
+            'Elasticnet':ElasticNet()
         }
             
             model_report:dict=evaluate_model(X_train,y_train,X_test,y_test,models)
@@ -69,3 +65,6 @@ class ModelTrainer:
         except Exception as e:
             logging.info('Exception occured at Model Training')
             raise customexception(e,sys)
+
+        
+    

@@ -12,9 +12,9 @@ from pathlib import Path
 
 @dataclass
 class DataIngestionConfig:
-    raw_data_path:str=os.path.join("artifacts/data","raw.csv")
-    train_data_path:str=os.path.join("artifacts/data","train.csv")
-    test_data_path:str=os.path.join("artifacts/data","test.csv")
+    raw_data_path:str=os.path.join("artifacts","raw.csv")
+    train_data_path:str=os.path.join("artifacts","train.csv")
+    test_data_path:str=os.path.join("artifacts","test.csv")
 
 class DataIngestion:
     def __init__(self):

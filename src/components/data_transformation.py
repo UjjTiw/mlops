@@ -17,7 +17,7 @@ from src.utils.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path=os.path.join('artifacts/transformation','preprocessor.pkl')
+    preprocessor_obj_file_path=os.path.join('artifacts','preprocessor.pkl')
 
 
 class DataTransformation:
@@ -125,3 +125,4 @@ class DataTransformation:
             logging.info("Exception occured in the initiate_datatransformation")
 
             raise customexception(e,sys)
+            
