@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ujjwaltiwari/Desktop/projects/mlops/mlruns/0/7d8b7812f7f0415a8a6678d5739cc091/artifacts
+end_time: 1718751550520
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7d8b7812f7f0415a8a6678d5739cc091
+run_name: serious-kite-803
+run_uuid: 7d8b7812f7f0415a8a6678d5739cc091
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718751547841
+status: 3
+tags: []
+user_id: ujjwaltiwari
