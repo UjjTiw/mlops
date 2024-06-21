@@ -8,6 +8,7 @@ dvc
 ipykernel
 xgboost
 datetime
+apache-airflow
 
 # dev requirements -
 
