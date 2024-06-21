@@ -25,7 +25,7 @@ class DataIngestion:
         logging.info("Data Ingestion started")
         try:
             # data=pd.read_csv("https://raw.githubusercontent.com/UjjTiw/mlops/main/experiment/playground-series-s3e8/train.csv")
-            data = pd.read_csv("/Users/ujjwaltiwari/Desktop/projects/mlops/experiment/playground-series-s3e8/train.csv")
+            data = pd.read_csv("experiment/playground-series-s3e8/train.csv")
             logging.info("Reading the dataframe")
 
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
